@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Pokémon Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Build a React application that fetches data from the PokeAPI (https://pokeapi.co/) and allows users to search, filter, and explore Pokémon. The app will have two phases:
 
-In the project directory, you can run:
+- **Interactive Data Explorer**: Displays a list of Pokémon with basic information and search/filter functionality.
+- **Advanced Data Explorer**: Adds enhanced features such as detailed views, favorites system, pagination, and sorting.
 
-### `npm start`
+## Interactive Data Explorer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Requirements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Data Fetching**:
+   - Fetch the first 150 Pokémon from the PokeAPI.
+   - Display each Pokémon in a card layout showing:
+     - Name
+     - Image (sprite)
+     - Type(s)
+     - ID number
 
-### `npm test`
+2. **Search Functionality**:
+   - Implement a search input that filters Pokémon by name in real-time.
+   - Add a filter dropdown to filter Pokémon by type (e.g., Fire, Water, Grass).
+   - Show loading and empty states when data is being fetched or no results are found.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **UI/UX**:
+   - Create a responsive design that works on both desktop and mobile devices.
+   - Include a simple header with the application name.
+   - Style the application with CSS or a CSS framework of your choice.
 
-### `npm run build`
+### Technical Requirements:
+- Use **functional components** with **React Hooks**.
+- Implement proper **loading** and **error states**.
+- Structure your code with **reusable components**.
+- Handle edge cases (e.g., no results, API errors).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Submission:
+- Deploy your application using a free hosting service (e.g., Vercel, Netlify, GitHub Pages).
+- Submit the link to your deployed application and GitHub repository.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Resources:
+- **PokeAPI Documentation**: [PokeAPI Documentation](https://pokeapi.co/docs/v2)
+- Example endpoint for Pokémon list: [https://pokeapi.co/api/v2/pokemon?limit=150](https://pokeapi.co/api/v2/pokemon?limit=150)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Advanced Data Explorer
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Overview
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Build on the Interactive Data Explorer by adding more advanced features including pagination, sorting, detailed views, and a favorites system.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Requirements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Enhanced List View**:
+   - Implement **pagination** with configurable items per page (10, 20, 50).
+   - Add **sorting** options (by ID, name, alphabetically).
+   - Include **filtering** by multiple types simultaneously (e.g., Fire + Water).
 
-## Learn More
+2. **Detailed View**:
+   - Create a detailed view for each Pokémon showing:
+     - All stats (HP, Attack, Defense, etc.)
+     - Abilities
+     - Moves
+     - Evolution chain
+   - Implement routing to navigate between the list and detailed views.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Favorites System**:
+   - Allow users to mark Pokémon as **favorites**.
+   - Create a separate view to display favorite Pokémon.
+   - Persist favorites in **localStorage** so they remain after page refresh.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Advanced Features**:
+   - Implement a **comparison tool** to compare stats of two Pokémon.
+   - Add a **random Pokémon** button that loads a random entry.
+   - Include **error boundaries** to prevent the app from crashing due to errors.
 
-### Code Splitting
+### Technical Requirements:
+- Use **React Context API** for state management.
+- Implement performance optimizations (e.g., `useMemo`, `useCallback`).
+- Create **custom hooks** for reusable logic.
+- Structure your project into logical folders (e.g., `components`, `hooks`, `contexts`).
+- Use **React Router** for navigation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Live Demo
 
-### Analyzing the Bundle Size
+You can access the live demo of the app here:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[**Pokémon Explorer** - Live Demo](https://pok-explorer-three.vercel.app/)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Development Setup
 
-### Advanced Configuration
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rajat457/Pok--Explorer.git
 
-### Deployment
+2. **Navigate to the project directory:**
+   ```bash
+   cd poke-explorer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. **Install dependencies:**
+   ```bash
+   npm install
 
-### `npm run build` fails to minify
+4. **Run the application:**
+   ```bash
+   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application should now be running on http://localhost:3000.     
