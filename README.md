@@ -51,7 +51,7 @@ You can access the live demo of the app here:
 
 2. **Navigate to the project directory:**
    ```bash
-   cd poke-explorer
+   cd pok--explorer
 
 3. **Install dependencies:**
    ```bash
