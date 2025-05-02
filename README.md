@@ -1,87 +1,37 @@
 # Pokémon Explorer
 
-## Overview
+A React-based web application that fetches data from the [PokeAPI](https://pokeapi.co/) and allows users to explore Pokémon. Users can search and filter Pokémon by name and type. The application features a responsive design and includes both a basic and advanced data explorer.
 
-Build a React application that fetches data from the PokeAPI (https://pokeapi.co/) and allows users to search, filter, and explore Pokémon. The app will have two phases:
+## Features
 
-- **Interactive Data Explorer**: Displays a list of Pokémon with basic information and search/filter functionality.
-- **Advanced Data Explorer**: Adds enhanced features such as detailed views, favorites system, pagination, and sorting.
+### Interactive Data Explorer (Phase 1)
+- Fetches the first 150 Pokémon from the PokeAPI
+- Real-time search functionality to filter Pokémon by name
+- Type-based filter (e.g., Fire, Water, Grass, etc.)
+- Displays name, image (sprite), type(s), and ID in a card-based layout
+- Responsive design for both desktop and mobile
+- Loading indicators and empty state handling
 
-## Interactive Data Explorer
+### Advanced Data Explorer (Phase 2)
+- Pagination with configurable items per page (10, 20, 50)
+- Sorting by ID and name (ascending/descending)
+- Multi-type filtering
+- Detailed view for each Pokémon, showing:
+  - Stats (HP, Attack, Defense, etc.)
+  - Abilities and Moves
+  - Evolution chain
+- Favorites system with localStorage persistence
+- View to compare stats of two Pokémon
+- Random Pokémon button
+- Error boundaries to catch unexpected issues
 
-### Requirements
-
-1. **Data Fetching**:
-   - Fetch the first 150 Pokémon from the PokeAPI.
-   - Display each Pokémon in a card layout showing:
-     - Name
-     - Image (sprite)
-     - Type(s)
-     - ID number
-
-2. **Search Functionality**:
-   - Implement a search input that filters Pokémon by name in real-time.
-   - Add a filter dropdown to filter Pokémon by type (e.g., Fire, Water, Grass).
-   - Show loading and empty states when data is being fetched or no results are found.
-
-3. **UI/UX**:
-   - Create a responsive design that works on both desktop and mobile devices.
-   - Include a simple header with the application name.
-   - Style the application with CSS or a CSS framework of your choice.
-
-### Technical Requirements:
-- Use **functional components** with **React Hooks**.
-- Implement proper **loading** and **error states**.
-- Structure your code with **reusable components**.
-- Handle edge cases (e.g., no results, API errors).
-
-### Submission:
-- Deploy your application using a free hosting service (e.g., Vercel, Netlify, GitHub Pages).
-- Submit the link to your deployed application and GitHub repository.
-
-### Resources:
-- **PokeAPI Documentation**: [PokeAPI Documentation](https://pokeapi.co/docs/v2)
-- Example endpoint for Pokémon list: [https://pokeapi.co/api/v2/pokemon?limit=150](https://pokeapi.co/api/v2/pokemon?limit=150)
-
----
-
-## Advanced Data Explorer
-
-### Overview
-
-Build on the Interactive Data Explorer by adding more advanced features including pagination, sorting, detailed views, and a favorites system.
-
-### Requirements
-
-1. **Enhanced List View**:
-   - Implement **pagination** with configurable items per page (10, 20, 50).
-   - Add **sorting** options (by ID, name, alphabetically).
-   - Include **filtering** by multiple types simultaneously (e.g., Fire + Water).
-
-2. **Detailed View**:
-   - Create a detailed view for each Pokémon showing:
-     - All stats (HP, Attack, Defense, etc.)
-     - Abilities
-     - Moves
-     - Evolution chain
-   - Implement routing to navigate between the list and detailed views.
-
-3. **Favorites System**:
-   - Allow users to mark Pokémon as **favorites**.
-   - Create a separate view to display favorite Pokémon.
-   - Persist favorites in **localStorage** so they remain after page refresh.
-
-4. **Advanced Features**:
-   - Implement a **comparison tool** to compare stats of two Pokémon.
-   - Add a **random Pokémon** button that loads a random entry.
-   - Include **error boundaries** to prevent the app from crashing due to errors.
-
-### Technical Requirements:
-- Use **React Context API** for state management.
-- Implement performance optimizations (e.g., `useMemo`, `useCallback`).
-- Create **custom hooks** for reusable logic.
-- Structure your project into logical folders (e.g., `components`, `hooks`, `contexts`).
-- Use **React Router** for navigation.
+## Technologies Used
+- **React** (Functional components, React Hooks)
+- **React Router** (Page navigation)
+- **React Context API** (State management)
+- **Custom Hooks** (Reusable logic)
+- **CSS** (Responsive layout and styling)
+- **PokeAPI** (Data source for Pokémon)
 
 ## Live Demo
 
@@ -111,4 +61,4 @@ You can access the live demo of the app here:
    ```bash
    npm start
 
-The application should now be running on http://localhost:3000.     
+The application should now be running on http://localhost:3000 .     
