@@ -1,0 +1,21 @@
+.detail-view {
+  max-width: 600px;
+  margin: auto;
+  text-align: left; /* Align all content to the left */
+  padding: 20px;
+  background: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.back-button {
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block; /* Ensure the button aligns properly */
+}
