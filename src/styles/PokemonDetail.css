@@ -1,0 +1,42 @@
+.detail-view {
+  max-width: 600px;
+  margin: auto;
+  text-align: left; /* Align all content to the left */
+  padding: 20px;
+  background: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-transform: capitalize;
+}
+.pokemon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.favorite-btn1 {
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #f4c542;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.favorite-btn1:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+ ul {
+  list-style-type: none;
+}

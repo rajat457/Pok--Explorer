@@ -1,0 +1,24 @@
+.favorites-page {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .back-to-home {
+    margin-top: 20px;
+  }
+  
+  .back-to-home a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .back-to-home a:hover {
+    text-decoration: underline;
+  }
+  

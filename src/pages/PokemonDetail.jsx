@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./PokemonDetail.css";
+import { useFavorites } from "../contexts/FavoritesContext";  // Import the Favorites context
+import "../styles/PokemonDetail.css";
 
 function PokemonDetail() {
   const { name } = useParams();
   const navigate = useNavigate();
+  const { favorites, addFavorite, removeFavorite } = useFavorites();  // Access favorites context
   const [pokemon, setPokemon] = useState(null);
   const [evolution, setEvolution] = useState([]);
+
+  const isFavorite = favorites.some((fav) => fav.id === pokemon?.id);  // Check if the pokemon is a favorite
+
+  const handleFavoriteToggle = () => {
+    if (isFavorite) {
+      removeFavorite(pokemon.id);  // Remove from favorites
+    } else {
+      addFavorite(pokemon);  // Add to favorites
+    }
+  };
 
   useEffect(() => {
     const fetchPokemonDetails = async () => {
@@ -39,8 +51,12 @@ function PokemonDetail() {
 
   return (
     <div className="detail-view">
-      <button onClick={() => navigate(-1)} className="back-button">← Back</button>
-      <h1>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
+      <div className="pokemon-header">
+        <h1>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
+        <button onClick={handleFavoriteToggle} className="favorite-btn1">
+          {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+        </button>
+      </div>
       <img src={pokemon.sprites.front_default} alt={pokemon.name} />
       <h3>Stats</h3>
       <ul>
@@ -48,25 +64,27 @@ function PokemonDetail() {
           <li key={stat.stat.name}>{stat.stat.name}: {stat.base_stat}</li>
         ))}
       </ul>
-      <br></br>
+  
       <h3>Abilities</h3>
       <ul>
         {pokemon.abilities.map((a) => (
           <li key={a.ability.name}>{a.ability.name}</li>
         ))}
       </ul>
-      <br></br>
+  
       <h3>Moves</h3>
       <ul>
         {pokemon.moves.slice(0, 10).map((m) => (
           <li key={m.move.name}>{m.move.name}</li>
         ))}
       </ul>
-      <br></br>
+  
       <h3>Evolution Chain</h3>
       <p>{evolution.join(" → ")}</p>
+      
     </div>
   );
+  
 }
 
 export default PokemonDetail;

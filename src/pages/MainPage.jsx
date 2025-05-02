@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Header from "../components/Header";
 import PokemonCard from "../components/PokemonCard";
 import SearchBar from "../components/SearchBar";
 import FilterDropdown from "../components/FilterDropdown";
@@ -78,7 +77,6 @@ function MainPage() {
 
   return (
     <div className="App">
-      <Header />
       <div className="controls">
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <FilterDropdown types={types} selectedType={selectedType} setSelectedType={setSelectedType} />

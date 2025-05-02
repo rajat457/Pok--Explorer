@@ -1,0 +1,64 @@
+/* src/components/CompareForm.css */
+.compare-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .compare-form select,
+  .compare-form button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .compare-form button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+  }
+  
+  .compare-form button:hover {
+    background-color: #4e48d2;
+  }
+  
+  .compare-form label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Compare button style */
+.compare-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor changes to a pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    text-transform: uppercase; /* Capitalize the button text */
+    font-weight: bold; /* Make the button text bold */
+  }
+  
+  .compare-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .compare-btn:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  

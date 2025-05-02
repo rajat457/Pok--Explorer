@@ -1,0 +1,62 @@
+.pokemon-card {
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow added */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+  text-transform: capitalize;
+  border: 2px solid #ccc;
+  margin: 10px;
+  color: #000; /* Ensure default text color */
+  position: relative; /* Needed for positioning the favorite button */
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  border-color: #8e44ad;
+}
+
+.pokemon-card a {
+  color: inherit;           /* Removes hyperlink color */
+  text-decoration: none;    /* Removes underline */
+  display: block;           /* Makes the link cover the whole card */
+}
+
+.pokemon-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favorite-btn {
+  font-size: 18px;
+  color: #f4c542; /* Gold-ish color */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px; /* Space between name and star */
+  position: absolute;
+  top: 24px;
+  right: 15px;
+  z-index: 10; /* Ensure the button is on top */
+}
+
+.favorite-btn:hover {
+  transform: scale(2.0);
+}
+
+.pokemon-card .type {
+  display: inline-block;
+  margin: 4px 6px;           /* Adds spacing between type badges */
+  padding: 4px 10px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+}

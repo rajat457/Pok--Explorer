@@ -1,0 +1,50 @@
+/* Container for the comparison */
+.compare-result {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* The two Pokémon cards side by side */
+.compare-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between the two columns */
+  margin-top: 20px;
+}
+
+/* Each Pokémon card styling */
+.pokemon {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.pokemon h3 {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.pokemon img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.pokemon p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.pokemon h4 {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}

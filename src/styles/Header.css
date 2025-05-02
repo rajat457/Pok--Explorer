@@ -1,0 +1,24 @@
+.random-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #6c63ff;  /* Purple color */
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .random-btn:hover {
+    background-color: #4b39b2;  /* Darker purple for hover effect */
+    transform: scale(1.05);  /* Slightly enlarge on hover */
+  }
+  
+  .random-btn:active {
+    transform: scale(1);  /* Reset scale when clicked */
+  }
+  
+  .random-btn:focus {
+    outline: none;  /* Removes the default focus outline */
+  }
+  
